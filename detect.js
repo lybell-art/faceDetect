@@ -8,8 +8,8 @@ function setup()
 	createCanvas(windowWidth,windowHeight);
 	var scaleFactor=1.0;
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
-	cam=createCapture(VIDEO, function(img){
-		faces=detector.detect(img);
+	cam=createCapture(VIDEO, function(cam){
+		faces=detector.detect(cam.elt);
 	});
 	cam.size(width,height);
 }

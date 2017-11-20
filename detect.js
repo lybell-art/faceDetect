@@ -9,7 +9,7 @@ function setup()
 	var scaleFactor=1.0;
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
 	cam=createCapture(VIDEO, function(cam){
-		faces=detector.detect(cam);
+		faces=detector.detect(cam.video);
 	});
 	cam.size(width,height);
 }

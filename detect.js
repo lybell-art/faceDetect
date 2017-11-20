@@ -17,7 +17,6 @@ function draw() {
     image(cam, 0, 0, width, height);
     stroke(255);
     noFill();
-	console.log(faces);
     if (faces) {
         faces.forEach(function (face) {
             var count = face[4];

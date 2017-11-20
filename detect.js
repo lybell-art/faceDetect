@@ -14,8 +14,7 @@ function setup()
 	cam.size(width,height);
 }
 function draw() {
-    image(img, 0, 0, w, h);
-
+    image(cam, 0, 0, w, h);
     stroke(255);
     noFill();
     if (faces) {

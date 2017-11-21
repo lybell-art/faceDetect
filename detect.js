@@ -6,7 +6,7 @@ var faces;
 function setup()
 {
 	createCanvas(windowWidth,windowHeight);
-	var scaleFactor=1.0;
+	var scaleFactor=1.5;
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
 	cam=createCapture(VIDEO);
 	cam.size(width,height);

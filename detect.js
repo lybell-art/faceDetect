@@ -21,6 +21,7 @@ function draw() {
     stroke(255);
     noFill();
 	console.log(faces.length);
+	ellipse(width/2,height/2,20*faces.length+50, 20*faces.length+50);
     if (faces) {
         faces.forEach(function (face) {
             var count = face[4];

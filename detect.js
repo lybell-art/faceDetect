@@ -14,7 +14,10 @@ function setup()
 }
 function draw() {
     image(cam, 0, 0, width, height);
-    faces=detector.detect(cam.elt);
+	var img;
+	img.copy(cam,0,0,width,height,0,0,width,height);
+        img.loadPixels();
+    faces=detector.detect(img.canvas);
     stroke(255);
     noFill();
 	console.log(faces.length);

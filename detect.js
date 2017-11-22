@@ -18,12 +18,9 @@ function setup()
 function draw() {
 	background(25);
 	img.copy(cam,0,0,width,height,0,0,width,height);
-	image(img,0,0);
-//        img.loadPixels();
     faces=detector.detect(img.canvas);
     stroke("#00ff00");
     noFill();
-	ellipse(width/2,height/2,20*faces.length+50, 20*faces.length+50);
     if (faces) {
         faces.forEach(function (face) {
             var count = face[4];

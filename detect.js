@@ -18,8 +18,6 @@ function setup()
 function draw() {
 	background(25);
 	img.copy(cam,0,0,width,height,0,0,width,height);
-    image(img, 0, 0, width, height);
-//	background(25);
         img.loadPixels();
     faces=detector.detect(img.canvas);
     stroke("#00ff00");
@@ -28,10 +26,7 @@ function draw() {
     if (faces) {
         faces.forEach(function (face) {
             var count = face[4];
-            if (count > 4) { // try different thresholds
-                rect(face[0], face[1], face[2], face[3]);
-            }
-		console.log(count, face[0]);
+            rect(face[0], face[1], face[2], face[3]);
         })
     }
 }

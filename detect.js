@@ -1,4 +1,5 @@
 var cam;
+var img;
 var detector;
 var classifier=objectdetect.frontalface;
 var faces;
@@ -10,12 +11,11 @@ function setup()
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
 	cam=createCapture(VIDEO);
 	cam.size(width,height);
-	console.log("123");
+	img=new p5.Image(width,height);
 }
 function draw() {
 //    image(cam, 0, 0, width, height);
 	console.log("123");
-	var img;
     img.copy(cam,0,0,width,height,0,0,width,height);
         img.loadPixels();
 	console.log("123");

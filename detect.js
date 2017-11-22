@@ -10,15 +10,19 @@ function setup()
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
 	cam=createCapture(VIDEO);
 	cam.size(width,height);
+	console.log("123");
 }
 function draw() {
 //    image(cam, 0, 0, width, height);
+	console.log("123");
 	var img;
     img.copy(cam,0,0,width,height,0,0,width,height);
         img.loadPixels();
+	console.log("123");
     faces=detector.detect(img.canvas);
     stroke(255);
     noFill();
+	console.log("123");
 	console.log(faces.length);
 	ellipse(width/2,height/2,20*faces.length+50, 20*faces.length+50);
     if (faces) {

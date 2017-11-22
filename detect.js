@@ -16,16 +16,13 @@ function setup()
 	background(0);
 }
 function draw() {
-//    image(cam, 0, 0, width, height);
-	background(25);
+    image(cam, 0, 0, width, height);
+//	background(25);
     img.copy(cam,0,0,width,height,0,0,width,height);
         img.loadPixels();
-	console.log("123");
     faces=detector.detect(img.canvas);
     stroke(255);
     noFill();
-	console.log("123");
-	console.log(faces.length);
 	ellipse(width/2,height/2,20*faces.length+50, 20*faces.length+50);
     if (faces) {
         faces.forEach(function (face) {

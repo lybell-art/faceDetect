@@ -17,9 +17,9 @@ function setup()
 }
 function draw() {
 	background(25);
-    image(cam, 0, 0, width, height);
+	img.copy(cam,0,0,width,height,0,0,width,height);
+    image(img, 0, 0, width, height);
 //	background(25);
-    img.copy(cam,0,0,width,height,0,0,width,height);
         img.loadPixels();
     faces=detector.detect(img.canvas);
     stroke(255);

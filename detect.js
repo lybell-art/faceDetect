@@ -6,16 +6,18 @@ var faces;
 
 function setup()
 {
-	createCanvas(windowWidth,windowHeight);
+	createCanvas(640,320);
+	background(128);
 	var scaleFactor=1.5;
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
 	cam=createCapture(VIDEO);
 	cam.size(width,height);
 	img=new p5.Image(width,height);
+	background(0);
 }
 function draw() {
 //    image(cam, 0, 0, width, height);
-	console.log("123");
+	background(25);
     img.copy(cam,0,0,width,height,0,0,width,height);
         img.loadPixels();
 	console.log("123");

@@ -18,7 +18,8 @@ function setup()
 function draw() {
 	background(25);
 	img.copy(cam,0,0,width,height,0,0,width,height);
-        img.loadPixels();
+	image(img);
+//        img.loadPixels();
     faces=detector.detect(img.canvas);
     stroke("#00ff00");
     noFill();

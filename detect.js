@@ -16,6 +16,7 @@ function setup()
 	background(0);
 }
 function draw() {
+	background(25);
     image(cam, 0, 0, width, height);
 //	background(25);
     img.copy(cam,0,0,width,height,0,0,width,height);

@@ -22,7 +22,7 @@ function draw() {
 //	background(25);
         img.loadPixels();
     faces=detector.detect(img.canvas);
-    stroke(255);
+    stroke("#00ff00");
     noFill();
 	ellipse(width/2,height/2,20*faces.length+50, 20*faces.length+50);
     if (faces) {
@@ -31,6 +31,7 @@ function draw() {
             if (count > 4) { // try different thresholds
                 rect(face[0], face[1], face[2], face[3]);
             }
+		console.log(count, face[0]);
         })
     }
 }

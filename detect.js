@@ -16,8 +16,9 @@ function setup()
 	background(0);
 }
 function draw() {
-	background(25);
+//	background(25);
 	img.copy(cam,0,0,width,height,0,0,width,height);
+	image(img,0,0);
     faces=detector.detect(img.canvas);
     stroke("#00ff00");
     noFill();

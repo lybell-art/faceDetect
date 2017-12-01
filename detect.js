@@ -6,7 +6,7 @@ var faces;
 
 function setup()
 {
-	createCanvas(640,320);
+	createCanvas(1280,960);
 	background(128);
 	var scaleFactor=1.5;
 	detector=new objectdetect.detector(width,height,scaleFactor, classifier);
